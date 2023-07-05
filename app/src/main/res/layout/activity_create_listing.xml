@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CreateListingActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:background="@drawable/ic_arrow_back"
+        app:layout_constraintLeft_toLeftOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_create_new_listing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Create New Listing"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        app:layout_constraintLeft_toRightOf="@id/back_arrow"></androidx.appcompat.widget.AppCompatTextView>
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="@dimen/_20sdp"
+     android:fillViewport="true"
+     app:layout_constraintTop_toBottomOf="@id/tv_create_new_listing">
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginRight="@dimen/_15sdp"
+         android:layout_marginLeft="@dimen/_15sdp"
+         android:paddingBottom="@dimen/_80sdp"
+         android:layout_marginBottom="@dimen/_60sdp">
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_details"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_30sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:background="#fce8f1"
+             android:text="Details"
+             android:textColor="@color/black"
+             android:gravity="center_vertical"
+             android:paddingLeft="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             app:layout_constraintTop_toTopOf="parent">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_title"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_details"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Title">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_title"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_title"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:textColor="#787878"
+             android:textSize="@dimen/_12sdp"
+             android:background="@android:color/transparent"
+             android:hint="Title here">
+
+         </androidx.appcompat.widget.AppCompatEditText>
+
+         <View
+             android:id="@+id/view1"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_8sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_title"></View>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_listing_tag"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/view1"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Listing Tag">
+
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_select_tag"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="Select listing tag "
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             app:layout_constraintBottom_toTopOf="@id/view2"
+             app:layout_constraintTop_toBottomOf="@+id/tv_listing_tag"></androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatImageView
+             android:id="@+id/img_dropdow"
+             android:layout_width="@dimen/_18sdp"
+             android:layout_height="@dimen/_18sdp"
+             android:background="@drawable/ic_down_arrow"
+             app:layout_constraintTop_toBottomOf="@+id/tv_listing_tag"
+             app:layout_constraintRight_toRightOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+         <View
+             android:id="@+id/view2"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_8sdp"
+             app:layout_constraintTop_toBottomOf="@id/tv_select_tag"></View>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_categories"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/view2"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Categories">
+
+
+         </androidx.appcompat.widget.AppCompatTextView>
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/tl_categories"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_7sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/tv_categories">
+
+             <AutoCompleteTextView
+                 android:id="@+id/category"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:inputType="none"
+                 android:hint="Select Category"
+                 />
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <!--<androidx.appcompat.widget.AppCompatAutoCompleteTextView
+             android:id="@+id/tv_category_tag"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Women"
+             android:inputType="none"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:background="@android:color/transparent"
+             app:layout_constraintTop_toBottomOf="@+id/tv_categories"></androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+
+         <androidx.appcompat.widget.AppCompatImageView
+             android:id="@+id/img_dropdow1"
+             android:layout_width="@dimen/_18sdp"
+             android:layout_height="@dimen/_18sdp"
+             android:background="@drawable/ic_down_arrow"
+             app:layout_constraintTop_toBottomOf="@+id/tv_categories"
+             app:layout_constraintRight_toRightOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+-->
+         <View
+             android:id="@+id/view3"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             app:layout_constraintTop_toBottomOf="@id/tl_categories"></View>
+
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_extradetails"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_30sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:background="#fce8f1"
+             android:text="Extra Details"
+             android:textColor="@color/black"
+             android:gravity="center_vertical"
+             android:paddingLeft="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:layout_marginTop="@dimen/_20sdp"
+             app:layout_constraintTop_toBottomOf="@id/view3">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_phone"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_extradetails"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Phone">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_phone"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_phone"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:textColor="#787878"
+             android:textSize="@dimen/_12sdp"
+             android:inputType="numberDecimal"
+             android:background="@android:color/transparent"
+             android:hint="Enter phone number"/>
+         <View
+             android:id="@+id/view4"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_8sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_phone"></View>
+
+
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_whatsappnumber"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/view4"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Whatsapp Number">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_whatsapp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_whatsappnumber"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:textColor="#787878"
+             android:textSize="@dimen/_12sdp"
+             android:inputType="numberDecimal"
+             android:background="@android:color/transparent"
+             android:hint="Enter phone number"/>
+
+         <View
+             android:id="@+id/view5"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_8sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_whatsapp"></View>
+
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_listingtype"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/view5"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Listing Type">
+
+
+         </androidx.appcompat.widget.AppCompatTextView>
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/tl_type"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_7sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/tv_listingtype">
+
+             <AutoCompleteTextView
+                 android:id="@+id/autolisting_type"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:inputType="none"
+                 android:hint="Select Type"
+                 />
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <!--<androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_listingtype_val"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="sell"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             app:layout_constraintTop_toBottomOf="@+id/tv_listingtype"></androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatImageView
+             android:id="@+id/img_dropdow3"
+             android:layout_width="@dimen/_18sdp"
+             android:layout_height="@dimen/_18sdp"
+             android:background="@drawable/ic_down_arrow"
+             app:layout_constraintTop_toBottomOf="@+id/tv_listingtype"
+             app:layout_constraintRight_toRightOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+-->
+         <View
+             android:id="@+id/view6"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             app:layout_constraintTop_toBottomOf="@id/tl_type"></View>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_price"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/view6"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Price">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_price"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_price"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:textColor="#787878"
+             android:textSize="@dimen/_12sdp"
+             android:inputType="numberDecimal"
+             android:background="@android:color/transparent"
+             android:hint="£000.00"/>
+         <View
+             android:id="@+id/view7"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_8sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_price"></View>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_description_details"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_30sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:background="#fce8f1"
+             android:text="Description Details"
+             android:textColor="@color/black"
+             android:gravity="center_vertical"
+             android:paddingLeft="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:layout_marginTop="@dimen/_20sdp"
+             app:layout_constraintTop_toBottomOf="@id/view7">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_social_media"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_description_details"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_20sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Social Media">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/cons2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_15sdp"
+             app:layout_constraintTop_toBottomOf="@id/tv_social_media">
+
+             <RelativeLayout
+                 android:id="@+id/rl_fb"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toLeftOf="@+id/rl_twitter"
+                 android:layout_marginRight="@dimen/_10sdp"
+                 app:layout_constraintHorizontal_weight="1">
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/tv_facebooklink"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textColor="#949494"
+                     android:textSize="@dimen/_12sdp"
+
+                     android:text="Facebook page Link">
+
+                 </androidx.appcompat.widget.AppCompatTextView>
+
+                 <androidx.appcompat.widget.AppCompatEditText
+                     android:id="@+id/et_facebook"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/_40sdp"
+                     android:layout_below="@+id/tv_facebooklink"
+                     android:layout_marginTop="@dimen/_7sdp"
+                     android:background="@drawable/rounded_corner_social_media"
+                     android:padding="@dimen/_4sdp"></androidx.appcompat.widget.AppCompatEditText>
+
+             </RelativeLayout>
+             <RelativeLayout
+                 android:id="@+id/rl_twitter"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 app:layout_constraintRight_toRightOf="parent"
+                 app:layout_constraintLeft_toRightOf="@+id/rl_fb"
+                 android:layout_marginLeft="@dimen/_10sdp"
+                 app:layout_constraintHorizontal_weight="1">
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/tv_twitterlink"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textColor="#949494"
+                     android:textSize="@dimen/_12sdp"
+
+                     android:text="Twitter Profile Link">
+
+                 </androidx.appcompat.widget.AppCompatTextView>
+
+                 <androidx.appcompat.widget.AppCompatEditText
+                     android:id="@+id/et_twitter"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/_40sdp"
+                     android:layout_below="@+id/tv_twitterlink"
+                     android:layout_marginTop="@dimen/_7sdp"
+                     android:padding="@dimen/_4sdp"
+                     android:background="@drawable/rounded_corner_social_media"></androidx.appcompat.widget.AppCompatEditText>
+
+
+             </RelativeLayout>
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/cons3"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_15sdp"
+             app:layout_constraintTop_toBottomOf="@id/cons2">
+
+             <RelativeLayout
+                 android:id="@+id/rl_youtube"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toLeftOf="@+id/rl_instra"
+                 android:layout_marginRight="@dimen/_10sdp"
+                 app:layout_constraintHorizontal_weight="1">
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/tv_youtubelink"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Youtube Channel Link"
+                     android:textColor="#949494"
+                     android:textSize="@dimen/_12sdp">
+
+                 </androidx.appcompat.widget.AppCompatTextView>
+
+                 <androidx.appcompat.widget.AppCompatEditText
+                     android:id="@+id/et_youtubelink"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/_40sdp"
+                     android:layout_below="@+id/tv_youtubelink"
+                     android:layout_marginTop="@dimen/_7sdp"
+                     android:padding="@dimen/_4sdp"
+                     android:background="@drawable/rounded_corner_social_media"></androidx.appcompat.widget.AppCompatEditText>
+
+             </RelativeLayout>
+             <RelativeLayout
+                 android:id="@+id/rl_instra"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 app:layout_constraintRight_toRightOf="parent"
+                 app:layout_constraintLeft_toRightOf="@+id/rl_youtube"
+                 android:layout_marginLeft="@dimen/_10sdp"
+                 app:layout_constraintHorizontal_weight="1">
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/tv_intralink"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textColor="#949494"
+                     android:textSize="@dimen/_12sdp"
+                     android:text="Instagram profileLink">
+
+                 </androidx.appcompat.widget.AppCompatTextView>
+
+                 <androidx.appcompat.widget.AppCompatEditText
+                     android:id="@+id/et_instra"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/_40sdp"
+                     android:layout_below="@+id/tv_intralink"
+                     android:layout_marginTop="@dimen/_7sdp"
+                     android:padding="@dimen/_4sdp"
+                     android:background="@drawable/rounded_corner_social_media"></androidx.appcompat.widget.AppCompatEditText>
+
+
+             </RelativeLayout>
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_description"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/cons3"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textSize="@dimen/_12sdp"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_20sdp"
+             android:text="Description"></androidx.appcompat.widget.AppCompatTextView>
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_description"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_120sdp"
+             app:layout_constraintTop_toBottomOf="@id/tv_description"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textSize="@dimen/_12sdp"
+             android:padding="@dimen/_7sdp"
+             android:gravity="start"
+             android:textColor="#606060"
+             android:layout_marginTop="@dimen/_10sdp"
+
+             android:background="@drawable/rounded_corner_social_media"
+             ></androidx.appcompat.widget.AppCompatEditText>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_summery"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/et_description"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textSize="@dimen/_12sdp"
+             android:textColor="@color/black"
+             android:visibility="gone"
+             android:layout_marginTop="@dimen/_20sdp"
+             android:text="Summary">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_summry"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_120sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_description"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textSize="@dimen/_12sdp"
+             android:padding="@dimen/_7sdp"
+             android:gravity="start"
+             android:visibility="gone"
+             android:textColor="#606060"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:background="@drawable/rounded_corner_social_media"></androidx.appcompat.widget.AppCompatEditText>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_media"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_30sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:background="#fce8f1"
+             android:text="Media"
+             android:textColor="@color/black"
+             android:gravity="center_vertical"
+             android:paddingLeft="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:layout_marginTop="@dimen/_20sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_description">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_listing_image"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_media"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Listing images">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_uploadimage"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_listing_image"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="#878787"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:textSize="@dimen/_10sdp"
+             android:text="You can upload up to 8 Images">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/cons_image"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_270sdp"
+             app:layout_constraintTop_toBottomOf="@+id/tv_uploadimage"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintLeft_toLeftOf="parent">
+
+             <!--<LinearLayout
+                 android:id="@+id/ll_img"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:visibility="gone"
+                 android:orientation="horizontal"></LinearLayout>-->
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/rec_image"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
+
+             </androidx.recyclerview.widget.RecyclerView>
+
+
+            <!-- <androidx.appcompat.widget.AppCompatImageView
+                 android:id="@+id/image_listing"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:visibility="gone"
+                 android:layout_margin="@dimen/_10sdp"></androidx.appcompat.widget.AppCompatImageView>
+-->
+             <androidx.appcompat.widget.AppCompatImageView
+                 android:id="@+id/img_upload"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_150sdp"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 android:background="@drawable/phato_area"></androidx.appcompat.widget.AppCompatImageView>
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_listing_video"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/cons_image"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_20sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Listing videos">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_uploadvideo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_listing_video"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="#878787"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:textSize="@dimen/_10sdp"
+             android:text="You can attach up to 1 Video">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/const_video"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_115sdp"
+             app:layout_constraintTop_toBottomOf="@+id/tv_uploadvideo"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:gravity="top"
+             android:padding="@dimen/_6sdp"
+             android:background="@drawable/rounded_corner_social_media"/>
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_youtube"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_40sdp"
+             app:layout_constraintTop_toBottomOf="@+id/const_video"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:hint="Enter full YouTube or Vimeo video link"
+
+             android:backgroundTint="#f3bbd4"></androidx.appcompat.widget.AppCompatEditText>
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/btn_add_vido"
+             android:layout_width="@dimen/_120sdp"
+             android:layout_height="@dimen/_40sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:background="@drawable/rounded_shape_submit"
+             android:textColor="@color/white"
+             android:text="Add video"
+             android:textAllCaps="false"
+             android:textSize="@dimen/_12sdp"
+             android:layout_marginTop="@dimen/_15sdp"
+             android:layout_marginBottom="@dimen/_40sdp"
+             app:layout_constraintTop_toBottomOf="@+id/et_youtube"></androidx.appcompat.widget.AppCompatButton>
+   <!--      <com.google.android.material.textfield.TextInputLayout
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="20dp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/btn_add_vido">
+
+             &lt;!&ndash; Inside text input layout add
+                   an auto complete text view
+                     and make its input type to none&ndash;&gt;
+             <AutoCompleteTextView
+                 android:id="@+id/autoComplete"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:inputType="none"
+                 android:text="Select Category"
+                 />
+
+         </com.google.android.material.textfield.TextInputLayout>-->
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_location"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_30sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:background="#fce8f1"
+             android:text="Address"
+             android:textColor="@color/black"
+             android:gravity="center_vertical"
+             android:paddingLeft="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:layout_marginTop="@dimen/_10sdp"
+             app:layout_constraintTop_toBottomOf="@+id/btn_add_vido"
+             />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_listinglocation"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_location"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Listing Location">
+
+
+         </androidx.appcompat.widget.AppCompatTextView>
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/tl_location"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_7sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/tv_listinglocation">
+
+             <AutoCompleteTextView
+                 android:id="@+id/autolisting_city"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:inputType="none"
+                 android:hint="Select City"
+                 />
+
+         </com.google.android.material.textfield.TextInputLayout>
+         <View
+             android:id="@+id/view9"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             app:layout_constraintTop_toBottomOf="@id/tl_location"></View>
+
+
+         <androidx.appcompat.widget.AppCompatTextView
+         android:id="@+id/tv_add1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_constraintTop_toBottomOf="@id/view9"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:textColor="@color/black"
+         android:layout_marginTop="@dimen/_7sdp"
+         android:textSize="@dimen/_12sdp"
+         android:text="Address Line 1">
+
+     </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_add1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_add1"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:textColor="#787878"
+             android:textSize="@dimen/_12sdp"
+             android:background="@android:color/transparent"
+             android:hint="Address">
+
+         </androidx.appcompat.widget.AppCompatEditText>
+         <View
+             android:id="@+id/view10"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_6sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_add1"></View>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_add2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/view10"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Address Line 2">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_add2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_add2"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:textColor="#787878"
+             android:textSize="@dimen/_12sdp"
+             android:background="@android:color/transparent"
+             android:hint="Address">
+
+         </androidx.appcompat.widget.AppCompatEditText>
+         <View
+             android:id="@+id/view11"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_6sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_add2"></View>
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_zipcode"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/view11"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="ZipCode">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_zipcode"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_zipcode"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:textColor="#787878"
+             android:textSize="@dimen/_12sdp"
+             android:background="@android:color/transparent"
+             android:hint="zipcode">
+
+         </androidx.appcompat.widget.AppCompatEditText>
+         <View
+             android:id="@+id/view12"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_6sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_zipcode"></View>
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/tv_addtionalinfo"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/view12"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:textColor="@color/black"
+             android:layout_marginTop="@dimen/_7sdp"
+             android:textSize="@dimen/_12sdp"
+             android:text="Additional info">
+
+         </androidx.appcompat.widget.AppCompatTextView>
+
+         <androidx.appcompat.widget.AppCompatEditText
+             android:id="@+id/et_additionalinfo"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/tv_addtionalinfo"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="@dimen/_6sdp"
+             android:textColor="#787878"
+             android:textSize="@dimen/_12sdp"
+             android:background="@android:color/transparent"
+             android:hint="additional info">
+
+         </androidx.appcompat.widget.AppCompatEditText>
+
+         <View
+             android:id="@+id/view13"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="#efa5c6"
+             android:layout_marginTop="@dimen/_6sdp"
+             app:layout_constraintTop_toBottomOf="@id/et_additionalinfo"></View>
+
+
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/btn_submit"
+             android:layout_width="@dimen/_120sdp"
+             android:layout_height="@dimen/_40sdp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             android:background="@drawable/rounded_shape_submit"
+             android:textColor="@color/white"
+             android:text="Submit"
+             android:textAllCaps="false"
+             android:textSize="@dimen/_12sdp"
+             android:layout_marginTop="@dimen/_15sdp"
+             android:layout_marginBottom="@dimen/_40sdp"
+             app:layout_constraintTop_toBottomOf="@+id/view13"></androidx.appcompat.widget.AppCompatButton>
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+ </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

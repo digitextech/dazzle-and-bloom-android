@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_105sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/r5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/r6"
+            app:layout_constraintHorizontal_weight=".75"
+            android:layout_marginRight="@dimen/_3sdp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_listing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:focusable="false"
+                    android:background="@drawable/placeholder"
+                    android:focusableInTouchMode="false"></androidx.appcompat.widget.AppCompatImageView>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/r6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/r5"
+            app:layout_constraintRight_toLeftOf="@id/r7"
+            android:layout_marginLeft="@dimen/_3sdp"
+            app:layout_constraintHorizontal_weight="1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_blueby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+
+                android:text="Blue by Enzoni"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_blueby"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Expiry:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_exprirydate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_blueby"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_toRightOf="@id/tv_expiry"
+                android:text="No expriry"
+                android:textColor="#cac8c8"
+                android:textSize="@dimen/_7sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_listingid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_expiry"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Listing ID:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_listingid_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_expiry"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toRightOf="@id/tv_listingid"
+                android:text="689698"
+                android:textColor="#cac8c8"
+                android:textSize="@dimen/_7sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_status"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:layout_below="@id/tv_listingid_number"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/rounded_shape_status"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"></androidx.appcompat.widget.AppCompatTextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/r7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/r6"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintHorizontal_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/consedit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_note_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_edit"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:background="@drawable/ic_edit"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tveditlisting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:text="Edit Listing"
+                        android:textColor="#cac8c8"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintLeft_toRightOf="@id/img_edit"
+                        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatTextView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="#f0f0f0"
+                    app:layout_constraintTop_toBottomOf="@+id/cons_note_edit"></View>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_preview"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@drawable/ic_preview"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view1"></androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvpreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="Preview"
+                    android:textColor="#cac8c8"
+                    android:textSize="@dimen/_7sdp"
+                    android:visibility="gone"
+
+                    app:layout_constraintLeft_toRightOf="@id/img_preview"
+                    app:layout_constraintTop_toBottomOf="@+id/view1"></androidx.appcompat.widget.AppCompatTextView>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="#f0f0f0"
+                    android:visibility="gone"
+
+                    app:layout_constraintTop_toBottomOf="@+id/tvpreview"></View>
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/cons_public"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toBottomOf="@+id/view1">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_public"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/ic_publish"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    ></androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvpublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Public"
+                    android:textColor="#cac8c8"
+                    android:textSize="@dimen/_7sdp"
+                    app:layout_constraintLeft_toRightOf="@id/img_public"
+                    app:layout_constraintTop_toTopOf="parent"
+                    ></androidx.appcompat.widget.AppCompatTextView>
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="#f0f0f0"
+                    app:layout_constraintTop_toBottomOf="@+id/cons_public"></View>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_notetoadmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/view3">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_nodeadmin"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/ic_note"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvnodeadmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Note to admin"
+                    android:textColor="#cac8c8"
+                    android:textSize="@dimen/_7sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/img_nodeadmin"></androidx.appcompat.widget.AppCompatTextView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="#f0f0f0"
+                    app:layout_constraintTop_toBottomOf="@+id/cons_notetoadmin"></View>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cons_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/view4">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_delete"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/ic_delete"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvdelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="Delete"
+                    android:textColor="#cac8c8"
+                    android:textSize="@dimen/_7sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/img_delete">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="#f0f0f0"
+                    app:layout_constraintTop_toBottomOf="@+id/cons_delete"></View>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="#f0f0f0"
+            app:layout_constraintBottom_toBottomOf="parent"></View>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

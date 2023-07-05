@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProductListDetailsActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consheader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_menu"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_22sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@drawable/ic_arrow_back"></androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dazzle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/img_menu"
+            android:layout_marginLeft="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible"
+            android:text="DAZZLE\n&amp; BLOOM"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/text_color"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_circle_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@drawable/ic_plus_in_circle"
+            app:layout_constraintLeft_toRightOf="@id/tv_dazzle"></androidx.appcompat.widget.AppCompatImageView>
+   <androidx.appcompat.widget.AppCompatTextView
+       android:id="@+id/tv_submit_listing"
+       android:layout_width="wrap_content"
+       android:layout_height="@dimen/_20sdp"
+       android:gravity="center"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintLeft_toRightOf="@+id/img_circle_plus"
+       android:layout_marginLeft="@dimen/_5sdp"
+       android:text="Submit Listing"
+       android:textColor="@color/black"
+       android:textSize="@dimen/_10sdp"
+       app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatTextView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_account"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/account"
+            app:layout_constraintRight_toRightOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgnotification"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:visibility="invisible"
+            android:background="@drawable/ic_notification"
+            app:layout_constraintRight_toLeftOf="@+id/img_account"></androidx.appcompat.widget.AppCompatImageView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/consheader"
+      android:paddingBottom="@dimen/_120sdp"
+      app:layout_constraintLeft_toLeftOf="parent">
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/consdetails"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_details"
+        android:layout_width="match_parent"
+       app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:layout_height="@dimen/_240sdp"></androidx.appcompat.widget.AppCompatImageView>
+
+
+   <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_325sdp"
+        app:iss_auto_cycle="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:iss_period="1000"
+        app:iss_placeholder="@drawable/placeholder"
+        app:iss_selected_dot="@drawable/rounded_dot"
+        app:iss_delay="0"
+       android:layout_marginLeft="@dimen/_10sdp"
+       android:layout_marginRight="@dimen/_10sdp"
+       app:iss_title_background="@android:color/transparent"
+        tools:ignore="MissingConstraints" />
+
+   <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_back"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_20sdp"
+       app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_7sdp"
+        android:background="@drawable/ic_arrow_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+       android:visibility="gone">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_share"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+       app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        app:layout_goneMarginTop="@dimen/_7sdp"
+        android:background="@drawable/ic_share"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_fav"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@id/img_share"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:background="@drawable/love"
+        app:tint="@color/grey"
+        android:tintMode="multiply"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/img_location"
+              android:layout_width="@dimen/_19sdp"
+              android:layout_height="@dimen/_23sdp"
+              android:layout_marginLeft="@dimen/_15sdp"
+              android:layout_marginTop="@dimen/_15sdp"
+              app:layout_constraintLeft_toLeftOf="parent"
+              android:background="@drawable/red_location"
+              app:layout_constraintTop_toBottomOf="@id/image_slider"></androidx.appcompat.widget.AppCompatImageView>
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/tv_location"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/_20sdp"
+              android:layout_marginLeft="@dimen/_11sdp"
+              android:text="location"
+              android:textColor="#999999"
+              android:textSize="@dimen/_12sdp"
+              app:layout_constraintLeft_toRightOf="@id/img_location"
+              app:layout_constraintTop_toBottomOf="@id/image_slider">
+          </androidx.appcompat.widget.AppCompatTextView>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_prod_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Red wedding dress"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textSize="@dimen/_17sdp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/img_location"></androidx.appcompat.widget.AppCompatTextView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_prod_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="£499.00"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_prod_title">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+          <View
+              android:id="@+id/viewdes"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_1sdp"
+              android:layout_margin="@dimen/_15sdp"
+              android:background="@color/black_overlay"
+              app:layout_constraintTop_toBottomOf="@id/tv_prod_price"
+              ></View>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textSize="@dimen/_17sdp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/viewdes"></androidx.appcompat.widget.AppCompatTextView>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_prod_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="velvet size 8 with adiustable corset Corset with 3/4 sleeves, with skirt (netted) and dupatta. bought from Seema in green street hghg klu kuh u h ggtilutyiultiug gygyg uytiytiytiytiytiy v truyruyry trtrutrutr 7rtrtrt rr67r6r67r6 r6r6r6r6r 6r"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="#999999"
+        android:scrollbars = "vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_des">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+          <WebView
+              android:id="@+id/web_postcontent"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/_15sdp"
+              android:layout_marginTop="@dimen/_10sdp"
+              app:layout_constraintTop_toBottomOf="@+id/tv_des"
+              tools:ignore="WebViewLayout">
+
+          </WebView>
+
+          <View
+              android:id="@+id/viewsimi"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_1sdp"
+              android:layout_margin="@dimen/_15sdp"
+              android:background="@color/black_overlay"
+              app:layout_constraintTop_toBottomOf="@id/web_postcontent"
+              ></View>
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/tv_rocomnded"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:layout_constraintLeft_toLeftOf="parent"
+              android:layout_marginTop="@dimen/_15sdp"
+              android:text="Similar listings"
+              android:layout_marginLeft="@dimen/_17sdp"
+              android:textColor="@color/black"
+              android:textSize="@dimen/_12sdp"
+              app:layout_constraintTop_toBottomOf="@id/viewsimi">
+
+          </androidx.appcompat.widget.AppCompatTextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_releated_prod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rocomnded"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginRight="@dimen/_12sdp"></androidx.recyclerview.widget.RecyclerView>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </ScrollView>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cons_contact_seller"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_37sdp"
+    android:layout_marginLeft="@dimen/_15sdp"
+    android:layout_marginRight="@dimen/_15sdp"
+    android:layout_marginBottom="@dimen/_15sdp"
+
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_contact_saller"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_add_fav"
+        app:layout_constraintHorizontal_weight="1"
+        android:background="@drawable/rounded_shape_contact_seller"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:text="Send Message"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_fav"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toRightOf="@+id/btn_contact_saller"
+        android:background="@drawable/rounded_shape_add_fav"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:text="Contact Seller"
+        android:textColor="#dd4f90"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

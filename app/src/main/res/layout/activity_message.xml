@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_13sdp"
+        android:background="@drawable/ic_arrow_back"
+        app:layout_constraintLeft_toLeftOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_mymessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Message"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        app:layout_constraintLeft_toRightOf="@id/back_arrow"></androidx.appcompat.widget.AppCompatTextView>
+
+    <View
+        android:id="@+id/view"
+      android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/tv_mymessage"></View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_messagelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_70sdp"
+        tools:listitem="@layout/item_messaelist"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/view"></androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

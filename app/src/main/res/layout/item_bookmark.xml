@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><!-- XML implementation of Card Layout -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cons_bookmark"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_140sdp"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:background="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_image"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_110sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+       app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:background="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_prod_bookmark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@drawable/placeholder"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:scaleType="centerCrop"></androidx.appcompat.widget.AppCompatImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_prod_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:text="Sapphire 3 piece suit"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/card_image"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_rupee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_prod_name"
+        app:layout_constraintLeft_toRightOf="@id/card_image"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:text="Price: £350.00"
+        tools:ignore="MissingConstraints">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/img_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:textSize="@dimen/_9sdp"
+        android:background="@drawable/rounded_shape_submit"
+        app:layout_constraintLeft_toRightOf="@id/card_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_rupee"></androidx.appcompat.widget.AppCompatTextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="#f0f0f0"
+        app:layout_constraintBottom_toBottomOf="parent"></View>
+</androidx.constraintlayout.widget.ConstraintLayout>

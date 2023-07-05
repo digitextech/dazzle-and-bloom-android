@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    android:background="@color/pink_1">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:background="@drawable/left_arrow_white"
+        app:layout_constraintLeft_toLeftOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dazzle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:text="DAZZLE\n&amp; BLOOM"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width ="match_parent"
+        android:layout_height ="@dimen/_45sdp"
+        android:id = "@+id/etmobilenumber"
+        android:hint ="Enter Mobile Number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dazzle"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textSize="@dimen/_13sdp"
+        android:backgroundTint="@color/white"
+        android:inputType ="numberDecimal"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_37sdp"
+        android:background="@drawable/rounded_corner_shape"
+        android:layout_marginTop="@dimen/_55sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etmobilenumber"
+        android:text="Submit"
+        android:textColor="@color/pink_1"
+        android:textAllCaps="false"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintRight_toRightOf="parent"></androidx.appcompat.widget.AppCompatButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

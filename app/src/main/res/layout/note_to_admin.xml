@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/why_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        android:text="Why you are deleting?"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_typehere"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/rounded_note_to_admin"
+        android:padding="@dimen/_4sdp"
+        android:textSize="@dimen/_9sdp"
+        android:gravity="top"
+        android:hint="Type here"
+        app:layout_constraintTop_toBottomOf="@+id/why_delete"></androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:text="Delete"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/rounded_shape_submit"
+        app:layout_constraintTop_toBottomOf="@id/et_typehere"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_delete"
+        android:gravity="center"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="Cancel"></androidx.appcompat.widget.AppCompatTextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

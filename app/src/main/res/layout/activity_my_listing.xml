@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MyListingActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:background="@drawable/ic_arrow_back"
+        app:layout_constraintLeft_toLeftOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_listing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="My Listing"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        app:layout_constraintLeft_toRightOf="@id/back_arrow"></androidx.appcompat.widget.AppCompatTextView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cons1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_65sdp"
+    android:layout_marginTop="@dimen/_35sdp"
+    android:layout_marginLeft="@dimen/_16sdp"
+    android:layout_marginRight="@dimen/_16sdp"
+    app:layout_constraintTop_toBottomOf="@+id/tv_listing"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/r2"
+        app:layout_constraintHorizontal_weight="1"
+        android:background="@drawable/rounded_corner_total_listing"
+        android:layout_marginRight="@dimen/_3sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_totallisting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center"
+            android:text="Total Listing"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_total_listingcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_totallisting"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#ffe400"
+            android:textSize="@dimen/_11sdp"></androidx.appcompat.widget.AppCompatTextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toRightOf="@id/r1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:background="@drawable/rounded_corner_active_listing"
+        app:layout_constraintHorizontal_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_activelisting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center"
+            android:text="Active Listing"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_activelistingcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_activelisting"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@+id/cons1">
+
+        <RelativeLayout
+            android:id="@+id/r3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/r4"
+            app:layout_constraintHorizontal_weight="1"
+            android:background="@drawable/rounded_corner_pending_approval"
+            android:layout_marginRight="@dimen/_3sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_pendingapproval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center"
+                android:text="Pending Approval"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_total_pendingcount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                android:text="0"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_below="@id/tv_pendingapproval"></androidx.appcompat.widget.AppCompatTextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/r4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/r3"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:background="@drawable/rounded_corner_expried_listing"
+            app:layout_constraintHorizontal_weight="1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_expriedlisting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:gravity="center"
+                android:text="Expired Listing"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_expiredcount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                android:text="0"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_below="@id/tv_expriedlisting"></androidx.appcompat.widget.AppCompatTextView>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@+id/cons2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_alllist"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_newlist"
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Your listings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            android:gravity="center"
+            android:background="@drawable/rectangle_all_listing">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_newlist"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_alllist"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/rectangle_add_new_listing"
+            android:text="Add new listing"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:gravity="center"
+            app:layout_constraintHorizontal_weight="1"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_100sdp"
+        app:layout_constraintTop_toBottomOf="@id/cons3">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_listing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        tools:itemCount="10"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_listing"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

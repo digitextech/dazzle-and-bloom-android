@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?><!-- XML implementation of Card Layout -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cons_message"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_110sdp"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:background="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_image"
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_90sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:background="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@drawable/placeholder"
+            android:layout_gravity="center"></androidx.appcompat.widget.AppCompatImageView>
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/ll_bid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/card_image"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unread"
+        android:textSize="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_7sdp"
+        android:paddingRight="@dimen/_7sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_shape_unread"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bid"
+            android:textSize="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_7sdp"
+            android:paddingRight="@dimen/_7sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_shape_bid">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+         </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_post_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ll_bid"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/pink_1"
+        app:layout_constraintLeft_toRightOf="@id/card_image"></androidx.appcompat.widget.AppCompatTextView>
+
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/img_author"
+    android:layout_width="@dimen/_25sdp"
+    android:layout_height="@dimen/_25sdp"
+    app:layout_constraintTop_toBottomOf="@id/tv_post_title"
+    app:layout_constraintLeft_toRightOf="@id/card_image"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:background="@drawable/placeholder"></androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_authorname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_author"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_post_title"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_author"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_authorname"></androidx.appcompat.widget.AppCompatTextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="#f0f0f0"
+        app:layout_constraintBottom_toBottomOf="parent"></View>
+</androidx.constraintlayout.widget.ConstraintLayout>

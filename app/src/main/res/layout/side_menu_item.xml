@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_menu_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:text="Menu Item"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/_28sdp"
+
+        android:textSize="@dimen/_13sdp"
+        android:textColor="#797979"
+        ></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_outerlink"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintLeft_toRightOf="@id/tv_menu_item"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/outerlink"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+<!--
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#f2f2f2"></View>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

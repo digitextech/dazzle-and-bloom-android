@@ -1,0 +1,34 @@
+<resources>
+
+    <style name="Widget.Theme.DazzleBloom.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="AppTheme.FullScreenDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimaryDark">@color/primary_pink</item>
+        <item name="colorAccent">@color/primary_pink</item>
+        <item name="colorPrimary">@color/primary_pink</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="actionMenuTextColor">@color/primary_pink</item>
+    </style>
+
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="NewDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>

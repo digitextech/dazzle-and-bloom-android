@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".ui.fragments.sell.SellFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consheader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/status_bar_color"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@drawable/ic_menu"></androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dazzle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/img_menu"
+            android:layout_marginLeft="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:text="DAZZLE\n&amp;BLOOM"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/text_color"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:background="#f5f5f5"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardBackgroundColor="#f5f5f5"
+        app:layout_constraintTop_toBottomOf="@id/consheader">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_11sdp"
+            android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_freelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:text="1. Free listing"></androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_free_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload your photos/Videos in minutes.
+Describe the item you are selling, give it a price
+and tap upload - Your item is now live"
+
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            ></androidx.appcompat.widget.AppCompatTextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardBackgroundColor="#f5f5f5"
+        app:layout_constraintTop_toBottomOf="@id/card1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_11sdp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_sell_ship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:text="2. Sell &amp; Ship"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_sell_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Congratulations! On selling your Item. Please
+arrange a convenient shipping method with the
+Buyer"
+
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp"
+                ></androidx.appcompat.widget.AppCompatTextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardBackgroundColor="#f5f5f5"
+        app:layout_constraintTop_toBottomOf="@id/card2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_11sdp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_paydaytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:text="3. Payday time!"></androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_paydaydesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="With zero selling fees you get to keep everything you earn."
+
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                ></androidx.appcompat.widget.AppCompatTextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit_list"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_37sdp"
+        app:layout_constraintTop_toBottomOf="@id/card3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="Submit your listing"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_11sdp"
+        android:background="@drawable/rounded_shape_submit_listing"></androidx.appcompat.widget.AppCompatButton>
+</androidx.constraintlayout.widget.ConstraintLayout>

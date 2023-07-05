@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.VerificationCodeActivity"
+    android:background="@color/pink_1">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dazzle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:text="DAZZLE\n&amp; BLOOM"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_bloom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dazzle"
+        android:textSize="@dimen/_16sdp"
+        android:textAllCaps="true"
+        android:text="DAZZLE\n&amp;BLOOM"
+        android:visibility="invisible"
+        android:textColor="@color/white"></androidx.appcompat.widget.AppCompatTextView>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tv_verification_code"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/tv_bloom"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginTop="@dimen/_35sdp"
+    android:layout_marginLeft="@dimen/_20sdp"
+    android:textSize="@dimen/_16sdp"
+    android:textColor="@color/white"
+    android:text="Verify it's you">
+
+</androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="We sent a text with a security code to , It may take a moment to arrive"
+        app:layout_constraintTop_toBottomOf="@id/tv_verification_code">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otp_tp"
+        app:width="@dimen/_37sdp"
+        app:otp_box_background="@drawable/rounded_corner_otp"
+        android:textColor="@color/red"
+        app:bar_enabled="true"
+        app:bar_error_color="@color/red"
+        app:bar_height="1.5dp"
+        app:box_margin_right = "@dimen/_4sdp"
+        app:box_margin_left = "@dimen/_4sdp"
+        app:bar_success_color="@color/green"
+        app:bar_active_color="@android:color/transparent"
+        app:bar_inactive_color ="@android:color/transparent"
+        app:height="@dimen/_37sdp"
+        app:hide_otp="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_verification_code"
+        app:length="6"
+        app:otp=""
+        app:otp_text_size="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/til_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv_verification_code"
+        android:layout_marginLeft="@dimen/_15sdp">
+
+        <EditText
+            android:id="@+id/one"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/rounded_corner_shape"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/two"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1"
+            tools:ignore="MissingConstraints"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_5sdp"/>
+
+        <EditText
+            android:id="@+id/two"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/rounded_corner_shape"
+            app:layout_constraintLeft_toRightOf="@+id/one"
+            app:layout_constraintRight_toLeftOf="@id/three"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/three"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/rounded_corner_shape"
+            app:layout_constraintLeft_toRightOf="@+id/two"
+            app:layout_constraintRight_toLeftOf="@id/four"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1"
+            tools:ignore="MissingConstraints"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_5sdp"/>
+        <EditText
+            android:id="@+id/four"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/rounded_corner_shape"
+            app:layout_constraintLeft_toRightOf="@+id/three"
+            app:layout_constraintRight_toLeftOf="@id/five"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/five"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/rounded_corner_shape"
+            app:layout_constraintLeft_toRightOf="@+id/four"
+            app:layout_constraintRight_toLeftOf="@id/six"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/six"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/rounded_corner_shape"
+            app:layout_constraintLeft_toRightOf="@+id/five"
+           app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tv_resendcode"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginLeft="@dimen/_20sdp"
+    android:text="@string/resend_code"
+    android:layout_marginTop="@dimen/_40sdp"
+    android:textColor="@color/white"
+    android:textSize="@dimen/_12sdp"
+    app:layout_constraintTop_toBottomOf="@id/otp_tp"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/rounded_corner_shape"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resendcode"
+        android:text="Sign in"
+        android:textColor="@color/pink_1"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+
+        app:layout_constraintRight_toRightOf="parent"></androidx.appcompat.widget.AppCompatButton>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/resendagain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:gravity="center"
+    android:textColor="@color/white"
+    android:textSize="@dimen/_9sdp"
+    android:text="You can request a resend after 120 seconds"
+    app:layout_constraintTop_toBottomOf="@id/btn_verify"></androidx.appcompat.widget.AppCompatTextView>
+</androidx.constraintlayout.widget.ConstraintLayout>
